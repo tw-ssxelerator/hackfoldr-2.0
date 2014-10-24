@@ -4,8 +4,9 @@ git --version
 upstream=$1
 : ${upstream:=origin}
 : ${REPO:=git@github.com:hackfoldr/hackfoldr-2.0}
+REPO='https://github.com/tw-ssxelerator/hackfoldr-2.0.git'
 git fetch $upstream
-if [ `git rev-list HEAD...$upstream/master --count` -ne 0 ]; then
+if [ `git rev-list HEAD...$upstream/ssx --count` -ne 0 ]; then
   echo "not deploying"
   exit 1
 fi
